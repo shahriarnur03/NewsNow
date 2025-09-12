@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsnow/views/explore_screen.dart';
 import 'package:newsnow/views/home_screen.dart'; // Import the simplified HomeScreen
 
 class BottomNavScreen extends StatefulWidget {
@@ -19,12 +20,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
       ),
     ),
-    const Center(
-      child: Text(
-        'Profile Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
-      ),
-    ),
+    const ExploreScreen(),
   ];
 
   @override
@@ -42,8 +38,8 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
             label: "Search",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile",
+            icon: Icon(Icons.explore_sharp),
+            label: "Explore",
           ),
         ],
         type: BottomNavigationBarType.fixed,

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class NewsCard extends StatelessWidget {
-  const NewsCard({super.key});
+  final String imageUrl, title, desc;
+  const NewsCard(
+      {super.key, required this.imageUrl, required this.title, required this.desc});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class NewsCard extends StatelessWidget {
                 topRight: Radius.circular(16),
               ),
               child: Image.network(
-                'https://img.freepik.com/free-photo/young-indian-boy-studying-using-laptop-white-background_1157-48115.jpg',
+                imageUrl,
                 width: 230,
                 height: 160,
                 fit: BoxFit.cover,
@@ -33,16 +35,16 @@ class NewsCard extends StatelessWidget {
               padding: const EdgeInsets.all(12),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
-                    'Please Subscribe to Shivam\'s Channel',
+                    title,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 6),
                   Text(
-                    'Lorem Ipsum is simply dummy text of the printing.',
+                    desc,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 12, color: Colors.black54),
