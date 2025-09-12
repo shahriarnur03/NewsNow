@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ShowCategoryCard extends StatelessWidget {
-  final String image, title, description;
+  final String image, title, description, url;
   const ShowCategoryCard({
     super.key,
     required this.image,
     required this.title,
     required this.description,
+    required this.url,
+    
   });
 
   @override

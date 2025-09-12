@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class ArticleScreen extends StatefulWidget {
-  String blogUrl;
-  ArticleScreen({required this.blogUrl});
+  final String blogUrl;
+  const ArticleScreen({super.key, required this.blogUrl});
 
   @override
   State<ArticleScreen> createState() => _ArticleScreenState();
@@ -24,43 +23,28 @@ class _ArticleScreenState extends State<ArticleScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(244, 255, 255, 255),
       appBar: AppBar(
-        title: Row(
+        title: const Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            GestureDetector(
-              onTap:(){
-                Navigator.pop(context);
-              },
-              child: Icon(
-                Icons.arrow_back_ios_new_rounded,
-                color: Colors.white,
-                size: 30,
+            Text(
+              "News",
+              style: TextStyle(
+                color: Colors.blue,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(width: MediaQuery.of(context).size.width/10,),
-            Row(
-              children: [
-                Text(
-                  "News",
-                  style: TextStyle(
-                    color: Color(0xff3280fe),
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                Text(
-                  "Nova",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
+            Text(
+              "Now",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ],
         ),
+        centerTitle: true,
+        elevation: 0.0,
       ),
       body: WebViewWidget(
         controller: controller,

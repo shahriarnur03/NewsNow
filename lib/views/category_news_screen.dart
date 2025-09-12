@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsnow/models/show_category_model.dart';
 import 'package:newsnow/services/show_category_news.dart';
+import 'package:newsnow/views/article_screen.dart';
 import 'package:newsnow/views/widgets/show_category_card.dart';
 
 class CategoryNewsScreen extends StatefulWidget {
@@ -47,10 +48,23 @@ class _CategoryNewsScreenState extends State<CategoryNewsScreen> {
           : ListView.builder(
               itemCount: categoryList.length,
               itemBuilder: (context, index) {
-                return ShowCategoryCard(
-                  image: categoryList[index].imageUrl!,
-                  title: categoryList[index].title!,
-                  description: categoryList[index].description!,
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ArticleScreen(
+                          blogUrl: categoryList[index].url!,
+                        ),
+                      ),
+                    );
+                  },
+                  child: ShowCategoryCard(
+                    image: categoryList[index].imageUrl!,
+                    title: categoryList[index].title!,
+                    description: categoryList[index].description!,
+                    url: categoryList[index].url!,
+                  ),
                 );
               },
             ),
