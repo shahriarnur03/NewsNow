@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsnow/views/explore_screen.dart';
-import 'package:newsnow/views/home_screen.dart'; // Import the simplified HomeScreen
+import 'package:newsnow/views/home_screen.dart';
+import 'package:newsnow/views/search_news.dart'; // Import the simplified HomeScreen
 
 class BottomNavScreen extends StatefulWidget {
   const BottomNavScreen({super.key});
@@ -14,12 +15,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
 
   List<Widget> pages = [
     const HomeScreen(), // Your simplified home screen
-    const Center(
-      child: Text(
-        'Search Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
-      ),
-    ),
+    const SearchNews(),
     const ExploreScreen(),
   ];
 
