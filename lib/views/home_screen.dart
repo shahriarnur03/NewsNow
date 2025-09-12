@@ -98,10 +98,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         'Trending News',
                         style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                       ),
-                      NewsHorizontalCard(),
-                      NewsHorizontalCard(),
-                      NewsHorizontalCard(),
-                      NewsHorizontalCard(),
+                      ListView.builder(
+                        shrinkWrap: true,
+                        physics: const ClampingScrollPhysics(),
+                        itemCount: articles.length,
+                        itemBuilder: (context, index) {
+                          return NewsHorizontalCard(
+                            article: articles[index],
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),

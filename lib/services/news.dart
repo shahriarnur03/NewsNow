@@ -12,19 +12,23 @@ class News {
     final data = await json.decode(response);
     final apiKey = data['api_key'];
 
-    String url = 'https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=$apiKey';
-    var res= await http.get(Uri.parse(url));
-    
-    var jsonData= jsonDecode(res.body);
+    String url =
+        'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=$apiKey';
+    var res = await http.get(Uri.parse(url));
 
-    if(jsonData["status"]=="ok"){
-      jsonData["articles"].forEach((element){
-        if(element["urlToImage"]!=null && element["description"]!=null){
-          ArticleModel articleModel=ArticleModel(
+    var jsonData = jsonDecode(res.body);
+
+    if (jsonData["status"] == "ok") {
+      jsonData["articles"].forEach((element) {
+        if (element["urlToImage"] != null && element["description"] != null) {
+          ArticleModel articleModel = ArticleModel(
             imageUrl: element["urlToImage"],
             description: element["description"],
             title: element["title"],
-            url: element["url"]
+            url: element["url"],
+            author: element["author"],
+            sourceName: element["source"]["name"],
+            publishedAt: element["publishedAt"],
           );
           news.add(articleModel);
         }
