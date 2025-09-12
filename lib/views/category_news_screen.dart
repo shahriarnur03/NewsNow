@@ -34,9 +34,10 @@ class _CategoryNewsScreenState extends State<CategoryNewsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 45,
         title: Text(
           widget.categoryName,
-          style: const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+          style: const TextStyle(color: Colors.blueAccent, fontWeight: FontWeight.bold, letterSpacing: 1.5),
         ),
         centerTitle: true,
         elevation: 0.0,
