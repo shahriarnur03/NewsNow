@@ -28,10 +28,10 @@ class _ExploreScreenState extends State<ExploreScreen> {
           child: GridView.builder(
             itemCount: categories.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,           // প্রতি row এ 2 টা
+              crossAxisCount: 2,           // 2 rows 
               crossAxisSpacing: 12,        // column gap
               mainAxisSpacing: 12,         // row gap
-              childAspectRatio: 1.4,       // width : height ratio (size balance করার জন্য)
+              childAspectRatio: 1.4,       
             ),
             itemBuilder: (context, index) {
               return TypeCard(
