@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:newsnow/models/category_model.dart';
 import 'package:newsnow/services/data.dart';
+import 'package:newsnow/views/category_news_screen.dart';
 import 'package:newsnow/views/widgets/type_card.dart';
 
 class ExploreScreen extends StatefulWidget {
@@ -34,9 +35,21 @@ class _ExploreScreenState extends State<ExploreScreen> {
               childAspectRatio: 1.4,       
             ),
             itemBuilder: (context, index) {
-              return TypeCard(
-                image: categories[index].image,
-                categoryName: categories[index].categoryName,
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CategoryNewsScreen(
+                        categoryName: categories[index].categoryName!,
+                      ),
+                    ),
+                  );
+                },
+                child: TypeCard(
+                  image: categories[index].image,
+                  categoryName: categories[index].categoryName,
+                ),
               );
             },
           ),
