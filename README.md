@@ -58,7 +58,7 @@ A modern, multi-platform Flutter news application that consumes the public <a hr
 	<tbody>
 		<tr>
 			<td align="center"><img src="assets/screenshots/Category.png" width="260" alt="Categories Grid"/><br/><sub>Explore</sub></td>
-			<td align="center"><img src="assets/screenshots/Category.png" width="260" alt="Category Articles"/><br/><sub>Category List</sub></td>
+			<td align="center"><img src="assets/screenshots/category_news.png" width="260" alt="Category Articles"/><br/><sub>Category List</sub></td>
 			<td align="center"><img src="assets/screenshots/Redirect_site.png" width="260" alt="Article WebView"/><br/><sub>Article Viewer</sub></td>
 		</tr>
 	</tbody>
