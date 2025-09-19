@@ -28,15 +28,46 @@ A modern, multi-platform Flutter news application that consumes the public <a hr
 
 ## 📱 Screens / Flows
 
-> Screens captured from the current build (folder: `assets/screenshots/`). All images are raw; consider optimizing or standardizing sizes for production/portfolio use.
+> Screens captured from the current build (`assets/screenshots/`). Using HTML tables for consistent sizing (uniform width = 260px). Adjust width to taste.
 
-| Splash                                   | Home (Top + Trending)                | Search                                   |
-| ---------------------------------------- | ------------------------------------ | ---------------------------------------- |
-| ![Splash](assets/screenshots/Splash.png) | ![Home](assets/screenshots/home.png) | ![Search](assets/screenshots/search.png) |
+<table>
+	<thead>
+		<tr>
+			<th>Splash</th>
+			<th>Home (Top + Trending)</th>
+			<th>Search</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="center"><img src="assets/screenshots/Splash.png" width="260" alt="Splash Screen"/><br/><sub>Splash</sub></td>
+			<td align="center"><img src="assets/screenshots/home.png" width="260" alt="Home Screen"/><br/><sub>Home Feed</sub></td>
+			<td align="center"><img src="assets/screenshots/search.png" width="260" alt="Search Screen"/><br/><sub>Search</sub></td>
+		</tr>
+	</tbody>
+</table>
 
-| Explore (Categories Grid)                      | Category Articles List                            | Article WebView (In-App)                                 |
-| ---------------------------------------------- | ------------------------------------------------- | -------------------------------------------------------- |
-| ![Categories](assets/screenshots/Category.png) | ![Category List](assets/screenshots/Category.png) | ![Article WebView](assets/screenshots/Redirect_site.png) |
+<table>
+	<thead>
+		<tr>
+			<th>Explore (Categories)</th>
+			<th>Category Articles</th>
+			<th>Article WebView</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td align="center"><img src="assets/screenshots/Category.png" width="260" alt="Categories Grid"/><br/><sub>Explore</sub></td>
+			<td align="center"><img src="assets/screenshots/Category.png" width="260" alt="Category Articles"/><br/><sub>Category List</sub></td>
+			<td align="center"><img src="assets/screenshots/Redirect_site.png" width="260" alt="Article WebView"/><br/><sub>Article Viewer</sub></td>
+		</tr>
+	</tbody>
+</table>
+
+<details>
+	<summary>Raw Full Capture (Large)</summary>
+	<img src="assets/screenshots/Screenshot%202025-09-19%20at%204.27.52%E2%80%AFPM.png" width="600" alt="Raw Full Screenshot"/>
+</details>
 
 ### 🖼️ Notes on Screens
 
@@ -49,11 +80,11 @@ A modern, multi-platform Flutter news application that consumes the public <a hr
 
 ### 📌 Recommendation
 
-If you intend to showcase on a portfolio:
+For portfolio polish:
 
--   Add a dark mode screenshot set (`_dark` suffix) for visual range.
--   Include a short GIF (e.g. screen recording) demonstrating navigation flow.
--   Crop / standardize resolutions (e.g. 1170x2532 for iPhone 14) for visual consistency.
+-   Add dark mode variants (suffix `_dark`).
+-   Include a short GIF demonstrating navigation flow.
+-   Normalize resolution & aspect ratio for visual consistency.
 
 ---
 
