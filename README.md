@@ -28,15 +28,32 @@ A modern, multi-platform Flutter news application that consumes the public <a hr
 
 ## 📱 Screens / Flows
 
-| Splash           | Home (Top + Trending) | Search           |
-| ---------------- | --------------------- | ---------------- |
-| (Add screenshot) | (Add screenshot)      | (Add screenshot) |
+> Screens captured from the current build (folder: `assets/screenshots/`). All images are raw; consider optimizing or standardizing sizes for production/portfolio use.
 
-| Explore (Categories) | Category Articles | Article WebView  |
-| -------------------- | ----------------- | ---------------- |
-| (Add screenshot)     | (Add screenshot)  | (Add screenshot) |
+| Splash                                   | Home (Top + Trending)                | Search                                   |
+| ---------------------------------------- | ------------------------------------ | ---------------------------------------- |
+| ![Splash](assets/screenshots/Splash.png) | ![Home](assets/screenshots/home.png) | ![Search](assets/screenshots/search.png) |
 
-> Tip: Place PNG/JPG screenshots under `assets/screenshots/` and replace the table cells with actual `![](assets/screenshots/home.png)` references.
+| Explore (Categories Grid)                      | Category Articles List                            | Article WebView (In-App)                                 |
+| ---------------------------------------------- | ------------------------------------------------- | -------------------------------------------------------- |
+| ![Categories](assets/screenshots/Category.png) | ![Category List](assets/screenshots/Category.png) | ![Article WebView](assets/screenshots/Redirect_site.png) |
+
+### 🖼️ Notes on Screens
+
+-   Splash: Animated pulse + tagline establishing brand identity.
+-   Home: Horizontal "Hottest News" carousel + vertical "Trending News" list.
+-   Search: Debounced manual search (trigger on submit) with empty + loading states.
+-   Explore: Grid layout (2xN) for quick category discovery.
+-   Category Articles: Re-uses category card styling; consistent typography & spacing.
+-   WebView: Clean AppBar branding; unrestricted JS for article rendering.
+
+### 📌 Recommendation
+
+If you intend to showcase on a portfolio:
+
+-   Add a dark mode screenshot set (`_dark` suffix) for visual range.
+-   Include a short GIF (e.g. screen recording) demonstrating navigation flow.
+-   Crop / standardize resolutions (e.g. 1170x2532 for iPhone 14) for visual consistency.
 
 ---
 
